@@ -17,9 +17,17 @@
     margin: 0;
     padding: 0;
     border: none;
+    text-decoration: none;
+    list-style-type: none;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
 }
 
 body {
@@ -136,3 +144,105 @@ nav {
 
 
 /* Second Section */
+#cadeiras {
+    width: 100%;
+    height: 300vh;
+}
+
+.menu-disciplinas {
+    width: 95%;
+    margin: auto;
+}
+
+.anos-title {
+    font-size: 80px;
+    font-weight: 800;
+    text-align: center;
+    margin: 30px 0 30px 0;
+}
+
+.semestres-title {
+    font-size: 50px;
+    font-weight: 300;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    text-decoration: underline;
+}
+
+.semestres {
+    display: grid;
+    margin: 0 0 200px 0;
+    row-gap: 60px;
+}
+
+.primeiro-semestre {
+    grid-template-columns: auto repeat(5, 20%) auto;
+}
+
+.segundo-semestre {
+    grid-template-columns: auto repeat(5, 20%) auto;
+}
+
+.disciplinas-link {
+    margin: 0 30px;
+}
+
+.disciplinas {
+    background-color: var(--background-color);
+    border: 2px solid var(--primary-color);
+    height: 400px;
+    color: var(--secondary-color);
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: 1s;
+}
+
+.disciplinas:hover {
+    transition: 1s;
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+}
+
+.disciplina-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+.disciplinas h3 {
+    padding: 0 10px;
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.disciplinas hr {
+    width: 50%;
+    margin: auto;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.disciplina-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 297px;
+    font-weight: 500;
+    padding: 0 20px;
+}
+
+.disciplinas p {
+    text-align: center;
+}
+
+.disciplinas span:first-of-type {
+    font-weight: 700;
+}
+
+.disciplinas span:last-of-type {
+    text-align: justify;
+    margin-bottom: 20px;
+}
